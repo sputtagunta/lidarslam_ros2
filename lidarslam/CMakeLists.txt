@@ -28,7 +28,7 @@ find_package(tf2_eigen REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(lidarslam_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
-find_package(ndt_omp REQUIRED)
+find_package(ndt_omp_ros2 REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(PCL REQUIRED)
 find_package(std_srvs REQUIRED)
@@ -79,7 +79,7 @@ ament_target_dependencies(lidarslam
   scanmatcher
   graph_based_slam
   lidarslam_msgs
-  ndt_omp
+  ndt_omp_ros2
   tf2_ros
   tf2_sensor_msgs
   tf2_geometry_msgs
