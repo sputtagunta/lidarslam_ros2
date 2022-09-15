@@ -31,6 +31,7 @@ find_package(nav_msgs REQUIRED)
 find_package(ndt_omp REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(PCL REQUIRED)
+find_package(std_srvs REQUIRED)
 find_package(OpenMP)
 find_package(g2o REQUIRED
 COMPONENTS
@@ -84,6 +85,7 @@ ament_target_dependencies(lidarslam
   tf2_geometry_msgs
   tf2_eigen
   nav_msgs
+  std_srvs
   pcl_conversions
   )
 
