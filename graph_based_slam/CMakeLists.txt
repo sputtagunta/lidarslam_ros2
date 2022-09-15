@@ -28,6 +28,7 @@ find_package(nav_msgs REQUIRED)
 find_package(std_srvs REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_sensor_msgs REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 find_package(lidarslam_msgs REQUIRED)
 find_package(ndt_omp REQUIRED)
 find_package(PCL REQUIRED)
@@ -60,6 +61,7 @@ ament_target_dependencies(graph_based_slam_component
   rclcpp_components 
   tf2_ros
   tf2_sensor_msgs
+  tf2_geometry_msgs
   geometry_msgs 
   sensor_msgs
   nav_msgs
