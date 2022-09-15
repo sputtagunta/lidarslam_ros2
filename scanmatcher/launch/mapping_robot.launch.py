@@ -18,7 +18,7 @@ def generate_launch_description():
         package='scanmatcher',
         executable='scanmatcher_node',
         parameters=[mapping_param_dir],
-        remappings=[('/input_cloud','/points'),('/imu_data','/gpsimu_driver/imu_data')],
+        remappings=[('/input_cloud','/points'),('/imu_data','/imu/data')],
         #remappings=[('/imu','/gpsimu_driver/imu_data')],# for imu debug
         output='screen'
         )
