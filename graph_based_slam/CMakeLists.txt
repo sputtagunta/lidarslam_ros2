@@ -27,6 +27,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(std_srvs REQUIRED)
 find_package(tf2_ros REQUIRED)
+find_package(tf2_sensor_msgs REQUIRED)
 find_package(lidarslam_msgs REQUIRED)
 find_package(ndt_omp REQUIRED)
 find_package(PCL REQUIRED)
@@ -57,7 +58,8 @@ target_compile_definitions(graph_based_slam_component PRIVATE "GS_GBS_BUILDING_D
 ament_target_dependencies(graph_based_slam_component
   rclcpp 
   rclcpp_components 
-  tf2_ros 
+  tf2_ros
+  tf2_sensor_msgs
   geometry_msgs 
   sensor_msgs
   nav_msgs
