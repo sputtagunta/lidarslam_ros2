@@ -21,6 +21,11 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(scanmatcher REQUIRED)
 find_package(graph_based_slam REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(tf2_sensor_msgs REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
+find_package(tf2_eigen REQUIRED)
+find_package(pcl_conversions REQUIRED)
 find_package(lidarslam_msgs REQUIRED)
 find_package(ndt_omp REQUIRED)
 find_package(Eigen3 REQUIRED)
@@ -73,6 +78,11 @@ ament_target_dependencies(lidarslam
   graph_based_slam
   lidarslam_msgs
   ndt_omp
+  tf2_ros
+  tf2_sensor_msgs
+  tf2_geometry_msgs
+  tf2_eigen
+  pcl_conversions
   )
 
 install(
