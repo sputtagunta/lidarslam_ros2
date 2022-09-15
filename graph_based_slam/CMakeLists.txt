@@ -32,7 +32,7 @@ find_package(tf2_geometry_msgs REQUIRED)
 find_package(tf2_eigen REQUIRED)
 find_package(pcl_conversions REQUIRED)
 find_package(lidarslam_msgs REQUIRED)
-find_package(ndt_omp REQUIRED)
+find_package(ndt_omp_ros2 REQUIRED)
 find_package(PCL REQUIRED)
 find_package(Ceres REQUIRED)
 find_package(g2o REQUIRED
@@ -72,7 +72,7 @@ ament_target_dependencies(graph_based_slam_component
   nav_msgs
   std_srvs
   lidarslam_msgs
-  ndt_omp
+  ndt_omp_ros2
 )
 
 add_executable(graph_based_slam_node
