@@ -58,7 +58,8 @@ ament_target_dependencies(scanmatcher_component
   tf2_ros 
   tf2_geometry_msgs 
   tf2_sensor_msgs 
-  tf2_eigen 
+  tf2_eigen
+  pcl_conversions
   geometry_msgs 
   sensor_msgs
   nav_msgs
