@@ -181,6 +181,7 @@ void ScanMatcherComponent::initializePubSub()
             robot_frame_id_, msg->header.frame_id, time_point);
           tf2::doTransform(*msg, transformed_msg, transform); // TODO:slow now(https://github.com/ros/geometry2/pull/432)
         } catch (tf2::TransformException & e) {
+          RCLCPP_ERROR(this->get_logger(), "initial pose error\n");
           RCLCPP_ERROR(this->get_logger(), "%s", e.what());
           return;
         }
@@ -323,6 +324,7 @@ void ScanMatcherComponent::receiveCloud(
         odom_frame_id_, robot_frame_id_, tf2_ros::fromMsg(
           stamp));
     } catch (tf2::TransformException & e) {
+      RCLCPP_ERROR(this->get_logger(), "odom_trans error\n");
       RCLCPP_ERROR(this->get_logger(), "%s", e.what());
     }
     Eigen::Affine3d odom_affine = tf2::transformToEigen(odom_trans);
