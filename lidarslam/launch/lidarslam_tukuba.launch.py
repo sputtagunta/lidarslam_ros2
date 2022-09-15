@@ -18,7 +18,7 @@ def generate_launch_description():
         package='scanmatcher',
         executable='scanmatcher_node',
         parameters=[main_param_dir],
-        remappings=[('/input_cloud','/points_raw')],
+        remappings=[('/input_cloud','/points')],
         output='screen'
         )
 
@@ -32,7 +32,7 @@ def generate_launch_description():
     tf = launch_ros.actions.Node(
         package='tf2_ros',
         executable='static_transform_publisher',
-        arguments=['0','0','0','0','0','0','1','base_link','velodyne']
+        arguments=['0','0','0','0','0','0','1','base_link','ouster']
         )
 
 
